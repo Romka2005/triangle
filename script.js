@@ -12,8 +12,13 @@ function trianglesbm() {
 
     triangle.style.borderBottom = a.value * 37 + "px solid " + bg.value;
     triangle.style.borderRight= b.value * 37 + "px solid transparent";
-    let result = Math.floor(Math.sqrt(Math.pow(a.value, 2) + Math.pow(b.value, 2)));
-    ds.innerHTML = "Гипотенуза равна: " + result;
+    let gep = Math.floor(Math.sqrt(Math.pow(a.value, 2) + Math.pow(b.value, 2)));
+    let perimitr = Number(a.value) + Number(b.value) + gep;
+    let ploshad = a.value/2 * Number(b.value);
+    ds.innerHTML = "Гипотенуза равна: " + gep + "\n" + 
+                    "Периметр треугольника: " + perimitr + "\n" +
+                    "Площадь треугольника: " + ploshad;
+    
 }
 
 
@@ -30,4 +35,6 @@ function trianglesbm2() {
     triangle2.style.borderLeft = a2.value * 37 + "px solid transparent";
     triangle2.style.borderRight = b2.value * 37 + "px solid transparent";
     triangle2.style.borderBottom = a2.value * 37 + "px solid " + bg2.value;
+    
+    
 }
